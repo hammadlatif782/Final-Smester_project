@@ -1,13 +1,13 @@
-"""
-Verification Script for OOP Analysis Project
-=============================================
 
-This script verifies that all project components are working correctly.
-Run this before submission to ensure everything is in order.
+#Verification Script for OOP Analysis Project
+#=============================================
 
-Usage:
-    python verify_project.py
-"""
+#This script verifies that all project components are working correctly.
+#Run this before submission to ensure everything is in order.
+
+#Usage:
+    #python verify_project.py
+
 
 import os
 import sys
@@ -15,7 +15,7 @@ from pathlib import Path
 
 
 class ProjectVerifier:
-    """Verify all components of the OOP analysis project."""
+    #Verify all components of the OOP analysis project
     
     def __init__(self):
         self.errors = []
@@ -24,7 +24,7 @@ class ProjectVerifier:
         self.base_dir = Path(__file__).parent
     
     def check_files_exist(self):
-        """Verify all required files exist."""
+        #Verify all required files exist
         print("\n" + "="*60)
         print("1. Checking for Required Files")
         print("="*60)
