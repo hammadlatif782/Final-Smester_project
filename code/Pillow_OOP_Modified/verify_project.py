@@ -41,10 +41,10 @@ class ProjectVerifier:
             filepath = self.base_dir / filename
             if filepath.exists():
                 size_kb = filepath.stat().st_size / 1024
-                print(f"✓ {filename} ({size_kb:.1f} KB)")
+                print(f" {filename} ({size_kb:.1f} KB)")
                 self.successes.append(f"Found {filename}")
             else:
-                print(f"✗ {filename} - NOT FOUND")
+                print(f" {filename} - NOT FOUND")
                 self.errors.append(f"Missing {filename}")
     
     def check_pillow_installed(self):
@@ -56,10 +56,10 @@ class ProjectVerifier:
         try:
             import PIL
             from PIL import Image, ImageDraw, ImageFilter
-            print(f"✓ Pillow installed (version {PIL.__version__})")
+            print(f" Pillow installed (version {PIL.__version__})")
             self.successes.append("Pillow is installed and importable")
         except ImportError as e:
-            print(f"✗ Pillow not installed: {e}")
+            print(f" Pillow not installed: {e}")
             self.errors.append(f"Pillow import failed: {e}")
     
     def check_custom_filters(self):
@@ -70,29 +70,29 @@ class ProjectVerifier:
         
         try:
             from custom_filters import VignetteFilter, SepiaToneFilter, InvertFilter
-            print("✓ VignetteFilter class found")
-            print("✓ SepiaToneFilter class found")
-            print("✓ InvertFilter class found")
+            print("yes VignetteFilter class found")
+            print("yes SepiaToneFilter class found")
+            print("yes InvertFilter class found")
             self.successes.append("All custom filter classes importable")
             
             # Test instantiation
             try:
                 vignette = VignetteFilter(strength=0.5, radius=1.5)
-                print("✓ VignetteFilter instantiated successfully")
+                print("yes VignetteFilter instantiated successfully")
                 
                 sepia = SepiaToneFilter(intensity=0.8)
-                print("✓ SepiaToneFilter instantiated successfully")
+                print(" SepiaToneFilter instantiated successfully")
                 
                 invert = InvertFilter()
-                print("✓ InvertFilter instantiated successfully")
+                print("yes InvertFilter instantiated successfully")
                 
                 self.successes.append("All custom filters instantiate correctly")
             except Exception as e:
-                print(f"✗ Filter instantiation failed: {e}")
+                print(f" Filter instantiation failed: {e}")
                 self.errors.append(f"Filter instantiation error: {e}")
         
         except ImportError as e:
-            print(f"✗ Custom filters import failed: {e}")
+            print(f" Custom filters import failed: {e}")
             self.errors.append(f"Custom filters import error: {e}")
     
     def check_filter_inheritance(self):
@@ -107,26 +107,26 @@ class ProjectVerifier:
             
             # Check inheritance
             if issubclass(VignetteFilter, ImageFilter.Filter):
-                print("✓ VignetteFilter inherits from ImageFilter.Filter")
+                print("yes VignetteFilter inherits from ImageFilter.Filter")
                 self.successes.append("VignetteFilter inheritance correct")
             else:
-                print("✗ VignetteFilter doesn't inherit from ImageFilter.Filter")
+                print(" VignetteFilter doesn't inherit from ImageFilter.Filter")
                 self.errors.append("VignetteFilter inheritance incorrect")
             
             if issubclass(SepiaToneFilter, ImageFilter.Filter):
-                print("✓ SepiaToneFilter inherits from ImageFilter.Filter")
+                print("yes SepiaToneFilter inherits from ImageFilter.Filter")
                 self.successes.append("SepiaToneFilter inheritance correct")
             else:
-                print("✗ SepiaToneFilter doesn't inherit from ImageFilter.Filter")
+                print(" SepiaToneFilter doesn't inherit from ImageFilter.Filter")
                 self.errors.append("SepiaToneFilter inheritance incorrect")
             
             # Check method implementation
             vignette = VignetteFilter()
             if hasattr(vignette, 'filter'):
-                print("✓ VignetteFilter implements filter() method")
+                print("yes VignetteFilter implements filter() method")
                 self.successes.append("VignetteFilter.filter() exists")
             else:
-                print("✗ VignetteFilter missing filter() method")
+                print("VignetteFilter missing filter() method")
                 self.errors.append("VignetteFilter.filter() not implemented")
         
         except Exception as e:
@@ -152,13 +152,13 @@ class ProjectVerifier:
                 vignette = VignetteFilter(strength=0.5)
                 result = test_img.filter(vignette)
                 if isinstance(result, Image.Image):
-                    print("✓ VignetteFilter.filter() returns Image object")
+                    print("yes VignetteFilter.filter() returns Image object")
                     self.successes.append("VignetteFilter produces valid output")
                 else:
-                    print("✗ VignetteFilter.filter() didn't return Image")
+                    print("yes VignetteFilter.filter() didn't return Image")
                     self.errors.append("VignetteFilter output type incorrect")
             except Exception as e:
-                print(f"✗ VignetteFilter failed: {e}")
+                print(f" VignetteFilter failed: {e}")
                 self.errors.append(f"VignetteFilter execution error: {e}")
             
             # Test SepiaToneFilter
@@ -166,13 +166,13 @@ class ProjectVerifier:
                 sepia = SepiaToneFilter(intensity=0.5)
                 result = test_img.filter(sepia)
                 if isinstance(result, Image.Image):
-                    print("✓ SepiaToneFilter.filter() returns Image object")
+                    print("yes SepiaToneFilter.filter() returns Image object")
                     self.successes.append("SepiaToneFilter produces valid output")
                 else:
-                    print("✗ SepiaToneFilter.filter() didn't return Image")
+                    print(" SepiaToneFilter.filter() didn't return Image")
                     self.errors.append("SepiaToneFilter output type incorrect")
             except Exception as e:
-                print(f"✗ SepiaToneFilter failed: {e}")
+                print(f" SepiaToneFilter failed: {e}")
                 self.errors.append(f"SepiaToneFilter execution error: {e}")
             
             # Test InvertFilter
@@ -180,17 +180,17 @@ class ProjectVerifier:
                 invert = InvertFilter()
                 result = test_img.filter(invert)
                 if isinstance(result, Image.Image):
-                    print("✓ InvertFilter.filter() returns Image object")
+                    print(" InvertFilter.filter() returns Image object")
                     self.successes.append("InvertFilter produces valid output")
                 else:
-                    print("✗ InvertFilter.filter() didn't return Image")
+                    print(" InvertFilter.filter() didn't return Image")
                     self.errors.append("InvertFilter output type incorrect")
             except Exception as e:
-                print(f"✗ InvertFilter failed: {e}")
+                print(f" InvertFilter failed: {e}")
                 self.errors.append(f"InvertFilter execution error: {e}")
         
         except Exception as e:
-            print(f"✗ Functionality test failed: {e}")
+            print(f" Functionality test failed: {e}")
             self.errors.append(f"Functionality test error: {e}")
     
     def check_parameter_validation(self):
@@ -205,23 +205,23 @@ class ProjectVerifier:
             # Test invalid strength
             try:
                 bad_filter = VignetteFilter(strength=1.5)
-                print("✗ VignetteFilter accepted invalid strength (1.5)")
+                print(" VignetteFilter accepted invalid strength (1.5)")
                 self.errors.append("VignetteFilter validation missing")
             except ValueError:
-                print("✓ VignetteFilter rejected invalid strength")
+                print("yes VignetteFilter rejected invalid strength")
                 self.successes.append("VignetteFilter validates strength parameter")
             
             # Test invalid intensity
             try:
                 bad_filter = SepiaToneFilter(intensity=-0.5)
-                print("✗ SepiaToneFilter accepted invalid intensity (-0.5)")
+                print(" SepiaToneFilter accepted invalid intensity (-0.5)")
                 self.errors.append("SepiaToneFilter validation missing")
             except ValueError:
-                print("✓ SepiaToneFilter rejected invalid intensity")
+                print("yes SepiaToneFilter rejected invalid intensity")
                 self.successes.append("SepiaToneFilter validates intensity parameter")
         
         except Exception as e:
-            print(f"✗ Validation test failed: {e}")
+            print(f" Validation test failed: {e}")
             self.errors.append(f"Validation test error: {e}")
     
     def check_documentation(self):
@@ -236,16 +236,16 @@ class ProjectVerifier:
                 content = f.read()
                 size = len(content)
                 if size > 1000:
-                    print(f"✓ README.md is substantial ({size} bytes)")
+                    print(f"yes README.md is substantial ({size} bytes)")
                     self.successes.append("README.md has good content")
                 else:
-                    print(f"⚠ README.md might be too short ({size} bytes)")
+                    print(f"warning README.md might be too short ({size} bytes)")
                     self.warnings.append("README.md might need more content")
                 
                 if "Pillow" in content and "OOP" in content:
-                    print("✓ README.md contains expected keywords")
+                    print("yes README.md contains expected keywords")
                 else:
-                    print("⚠ README.md might be missing key content")
+                    print("warning README.md might be missing key content")
         except Exception as e:
             self.errors.append(f"README.md check failed: {e}")
         
@@ -255,17 +255,17 @@ class ProjectVerifier:
                 content = f.read()
                 size = len(content)
                 if size > 5000:
-                    print(f"✓ PILLOW_OOP_ANALYSIS.md is substantial ({size} bytes)")
+                    print(f"yes PILLOW_OOP_ANALYSIS.md is substantial ({size} bytes)")
                     self.successes.append("PILLOW_OOP_ANALYSIS.md has good content")
                 else:
-                    print(f"⚠ Analysis document might be too short ({size} bytes)")
+                    print(f"warning: Analysis document might be too short ({size} bytes)")
                     self.warnings.append("Analysis document might need expansion")
                 
                 # Check for OOP principles
                 principles = ["Encapsulation", "Inheritance", "Polymorphism", "Abstraction"]
                 found = sum(1 for p in principles if p in content)
                 if found >= 3:
-                    print(f"✓ Analysis covers OOP principles ({found}/4)")
+                    print(f"yes Analysis covers OOP principles ({found}/4)")
                     self.successes.append("OOP principles documented")
         except Exception as e:
             self.errors.append(f"Analysis check failed: {e}")
@@ -276,28 +276,28 @@ class ProjectVerifier:
         print("VERIFICATION SUMMARY")
         print("="*60)
         
-        print(f"\n✓ Successes: {len(self.successes)}")
+        print(f"\n Successes: {len(self.successes)}")
         for success in self.successes[:5]:
             print(f"  • {success}")
         if len(self.successes) > 5:
             print(f"  ... and {len(self.successes) - 5} more")
         
         if self.warnings:
-            print(f"\n⚠ Warnings: {len(self.warnings)}")
+            print(f"\n Warnings: {len(self.warnings)}")
             for warning in self.warnings:
                 print(f"  • {warning}")
         
         if self.errors:
-            print(f"\n✗ Errors: {len(self.errors)}")
+            print(f"\n Errors: {len(self.errors)}")
             for error in self.errors:
                 print(f"  • {error}")
         
         print("\n" + "="*60)
         if not self.errors:
-            print("✅ ALL CHECKS PASSED - PROJECT READY FOR SUBMISSION")
+            print("ALL CHECKS PASSED - PROJECT READY FOR SUBMISSION")
             return 0
         else:
-            print("❌ SOME CHECKS FAILED - PLEASE FIX ISSUES ABOVE")
+            print(" SOME CHECKS FAILED - PLEASE FIX ISSUES ABOVE")
             return 1
     
     def run_all_checks(self):
