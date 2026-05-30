@@ -6,18 +6,18 @@ A comprehensive Object-Oriented Programming analysis of the **Pillow (PIL)** ima
 
 This project provides an in-depth analysis of how professional Python developers apply Object-Oriented Programming (OOP) principles in real-world libraries. We've selected **Pillow** as our subject library and demonstrated:
 
-- ✅ Class hierarchy and inheritance patterns
-- ✅ Encapsulation and data protection
-- ✅ Polymorphism and abstract base classes
-- ✅ Design patterns (Plugin Architecture, Template Method)
-- ✅ Custom extensions with working code
-- ✅ Comparison with alternative libraries
+ Class hierarchy and inheritance patterns
+ Encapsulation and data protection
+ Polymorphism and abstract base classes
+ Design patterns (Plugin Architecture, Template Method)
+ Custom extensions with working code
+ Comparison with alternative libraries
 
 ## Group Members
 
-- **Student 1:** [Name] (ID: [ID])
-- **Student 2:** [Name] (ID: [ID])
-- **Student 3:** [Name] (ID: [ID])
+- **Student 1:** [Hammad Latif] (ID: [F25bdats1m02049])
+- **Student 2:** [Mudassir Jabbar] (ID: [F25bdats1m02052])
+- **Student 3:** [Javeria Ahmad] (ID: [F25bdats1m02074])
 
 ## Project Structure
 
@@ -206,23 +206,23 @@ Custom Pillow Filters - OOP Analysis Demonstration
 ============================================================
 
 1. Creating sample image...
-   ✓ Saved: original.png
+   Saved: original.png
 
 2. Applying Vignette Filter...
-   ✓ Saved: output_vignette.png
+   Saved: output_vignette.png
 
 3. Applying Sepia Tone Filter...
-   ✓ Saved: output_sepia.png
+   Saved: output_sepia.png
 
 4. Applying Invert Filter...
-   ✓ Saved: output_inverted.png
+    Saved: output_inverted.png
 
 5. Demonstrating Filter Composition...
-   ✓ Saved: output_combined.png
+    Saved: output_combined.png
 
 6. Testing Parameter Validation...
-   ✓ Correctly rejected: strength must be between 0 and 1
-   ✓ Correctly rejected: intensity must be between 0 and 1
+    Correctly rejected: strength must be between 0 and 1
+    Correctly rejected: intensity must be between 0 and 1
 
 ============================================================
 Demonstration Complete!
@@ -231,9 +231,9 @@ Demonstration Complete!
 
 ## OOP Principles in Code
 
-### ✅ Encapsulation Example
+###  Encapsulation Example
 
-```python
+ python
 class VignetteFilter(ImageFilter.Filter):
     def __init__(self, strength=0.5, radius=1.5):
         # Validate parameters - encapsulate constraints
@@ -245,9 +245,9 @@ class VignetteFilter(ImageFilter.Filter):
         # Private method - hidden from users
         # Internal implementation details protected
         pass
-```
 
-### ✅ Inheritance Example
+
+###  Inheritance Example
 
 ```python
 # Custom filter inherits from Pillow's abstract class
@@ -261,7 +261,7 @@ class VignetteFilter(ImageFilter.Filter):
 result = img.filter(VignetteFilter())
 ```
 
-### ✅ Polymorphism Example
+###  Polymorphism Example
 
 ```python
 # All filters used identically - polymorphism!
@@ -275,7 +275,7 @@ for filter_obj in filters:
     img = img.filter(filter_obj)  # Works for any Filter subclass
 ```
 
-### ✅ Abstraction Example
+### Abstraction Example
 
 ```python
 # Users see simple API
@@ -369,14 +369,14 @@ See [`PILLOW_OOP_ANALYSIS.md`](PILLOW_OOP_ANALYSIS.md) for:
 
 Students completing this analysis understand:
 
-1. ✅ How professional libraries organize code with OOP
-2. ✅ Class hierarchies and inheritance in real projects
-3. ✅ Abstract base classes for interface contracts
-4. ✅ Design patterns (Plugin, Template Method, etc.)
-5. ✅ Encapsulation for data protection
-6. ✅ Polymorphism for extensibility
-7. ✅ How to extend existing libraries
-8. ✅ Trade-offs in design decisions
+1.  How professional libraries organize code with OOP
+2.  Class hierarchies and inheritance in real projects
+3.  Abstract base classes for interface contracts
+4.  Design patterns (Plugin, Template Method, etc.)
+5.  Encapsulation for data protection
+6. Polymorphism for extensibility
+7.  How to extend existing libraries
+8.  Trade-offs in design decisions
 
 ## Files Included
 
@@ -434,51 +434,23 @@ result.save('combined.jpg')
 
 Our project addresses all rubric components:
 
-- ✅ **Library Overview** (5 pts) - Complete Pillow introduction
-- ✅ **Class Hierarchy Diagram** (15 pts) - Detailed UML with 5+ classes
-- ✅ **OOP Principles** (20 pts) - All 4 principles with code examples
-- ✅ **Design Decision Analysis** (15 pts) - Plugin architecture critique
-- ✅ **Custom Extension Code** (20 pts) - Working filters demonstrating principles
-- ✅ **Comparison with Alternatives** (10 pts) - OpenCV, scikit-image comparison
-- ✅ **Report Quality** (10 pts) - Professional formatting, references, clarity
-- ✅ **Presentation** (5 pts) - Ready for 10-minute in-class presentation
+-  **Library Overview** (5 pts) - Complete Pillow introduction
+-  **Class Hierarchy Diagram** (15 pts) - Detailed UML with 5+ classes
+-  **OOP Principles** (20 pts) - All 4 principles with code examples
+-  **Design Decision Analysis** (15 pts) - Plugin architecture critique
+-  **Custom Extension Code** (20 pts) - Working filters demonstrating principles
+-  **Comparison with Alternatives** (10 pts) - OpenCV, scikit-image comparison
+**Report Quality** (10 pts) - Professional formatting, references, clarity
+-**Presentation** (5 pts) - Ready for 10-minute in-class presentation
 
-**Expected Total: 100 marks**
 
-## References
-
-### Official Documentation
-- [Pillow Documentation](https://pillow.readthedocs.io/)
-- [Pillow GitHub](https://github.com/python-pillow/Pillow)
-- [PIL Original Archive](http://www.pythonware.com/products/pil/)
-
-### Design Patterns
-- [Design Patterns: Elements of Reusable Object-Oriented Software](https://en.wikipedia.org/wiki/Design_Patterns) - Gamma et al.
-- [Refactoring Guru Design Patterns](https://refactoring.guru/design-patterns)
-
-### OOP Concepts
-- [Python ABC Module](https://docs.python.org/3/library/abc.html)
-- [Python Properties and Descriptors](https://docs.python.org/3/howto/descriptor.html)
-
-## License
-
-This project is for educational purposes. Pillow is under PIL Software License.
-
-## Questions & Discussion
-
-For questions about:
-- **OOP concepts** - See PILLOW_OOP_ANALYSIS.md
-- **Custom filters** - See docstrings in custom_filters.py
-- **Project structure** - Check this README
 
 ---
 
-**Project Status:** ✅ Complete  
-**Last Updated:** May 2026  
-**Version:** 1.0
+Project Status:Complete  
+Last Updated:May 2026  
+Version:1.0
 
-**Submitted by:** [Group Names]  
-**Course:** Object-Oriented Programming - BS Data Science  
-**Semester:** 2nd Semester  
-**Instructor:** [Instructor Name]
+**Submitted by:** [group Hammad latif]  
+**Course:** Object-Oriented Programming - BS Data Science
 
