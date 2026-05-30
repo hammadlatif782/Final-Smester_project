@@ -3,7 +3,7 @@ Object-Oriented Programming Analysis: Pillow Library
 Object-Oriented Programming Analysis: Pillow Library Course: Object-Oriented Programming (OOP) Final Term Project
 
 Program: BS Data Science — Semester 2 
-Group Member     ROLL NUM 
+Group Member     ROLL NUMBER 
 Hammad Latif    F25BDATS1M02049
 Mudassir Jabbar F25BDATS1M02052 
 Javeria Ahmad   F25BDATS1M02074 
