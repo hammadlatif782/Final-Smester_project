@@ -42,10 +42,11 @@ class BaseFilter(ImageFilter.Filter):
             # This is a band - convert to PIL Image
             band_bytes = image.tobytes()
             img = Image.frombytes('L', image.size, band_bytes)
+            
             # Apply filter to the band
             return self._filter_band(img).im
         elif isinstance(image, Image.Image):
-            # Full image
+          
             return self._filter_image(image)
         else:
             return image
