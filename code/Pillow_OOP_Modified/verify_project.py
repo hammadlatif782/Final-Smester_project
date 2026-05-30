@@ -1,7 +1,7 @@
 
 #Verification Script for OOP Analysis Project
 #=============================================
-
+# final smester project
 #This script verifies that all project components are working correctly.
 #Run this before submission to ensure everything is in order.
 
