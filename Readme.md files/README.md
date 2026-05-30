@@ -2,7 +2,7 @@
 
 A comprehensive Object-Oriented Programming analysis of the **Pillow (PIL)** image processing library for the BS Data Science OOP Final Term Project.
 
-## Project Overview
+## Project overview
 
 This project provides an in-depth analysis of how professional Python developers apply Object-Oriented Programming (OOP) principles in real-world libraries. We've selected **Pillow** as our subject library and demonstrated:
 
@@ -32,7 +32,7 @@ This project provides an in-depth analysis of how professional Python developers
     └── OOP_Analysis_Report.pdf       # Formatted PDF report
 ```
 
-## Why Pillow?
+## Why we use Pillow?
 
 Pillow was chosen because it exemplifies professional-grade OOP design:
 
