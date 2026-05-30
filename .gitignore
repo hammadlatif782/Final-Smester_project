@@ -1,0 +1,112 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# ========================
+# Virtual Environment
+# ========================
+venv/
+env/
+ENV/
+.venv/
+.env
+
+# ========================
+# Pillow / Image Files
+# ========================
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
+*.ico
+*.psd
+*.raw
+
+# Output images (agar code images generate karta hai)
+output/
+outputs/
+processed/
+results/
+
+# ========================
+# Jupyter Notebook
+# ========================
+.ipynb_checkpoints/
+*.ipynb
+
+# ========================
+# OS Files
+# ========================
+# Windows
+desktop.ini
+Thumbs.db
+$RECYCLE.BIN/
+*.lnk
+
+# Mac
+.DS_Store
+.AppleDouble
+
+# ========================
+# IDE / Editor
+# ========================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.cursor/
+
+# ========================
+# Secrets & Keys
+# ========================
+*.pem
+*.key
+*.cert
+*.p12
+secret*.txt
+*secret*
+config.php
+*.json.key
+
+# ========================
+# Logs & Temp Files
+# ========================
+*.log
+*.tmp
+*.temp
+*.swp
+*.bak
+error_log
+stderr.log
+
+# ========================
+# Data Files (optional)
+# ========================
+*.csv
+*.xlsx
+*.xls
+*.zip
+*.tar
+*.gz
+*.7z
