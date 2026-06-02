@@ -6,50 +6,45 @@ A comprehensive Object-Oriented Programming analysis of the **Pillow (PIL)** ima
 
 This project provides an in-depth analysis of how professional Python developers apply Object-Oriented Programming (OOP) principles in real-world libraries. We've selected **Pillow** as our subject library and demonstrated:
 
-- ✅ Class hierarchy and inheritance patterns
-- ✅ Encapsulation and data protection
-- ✅ Polymorphism and abstract base classes
-- ✅ Design patterns (Plugin Architecture, Template Method)
-- ✅ Custom extensions with working code
-- ✅ Comparison with alternative libraries
+ Class hierarchy and inheritance patterns
+ Encapsulation and data protection
+ Polymorphism and abstract base classes
+ Design patterns (Plugin Architecture, Template Method)
+ Custom extensions with working code
+ Comparison with alternative libraries
 
-## Group Members
-
-- **Student 1:** [Name] (ID: [ID])
-- **Student 2:** [Name] (ID: [ID])
-- **Student 3:** [Name] (ID: [ID])
 
 ## Project Structure
 
 ```
-├── README.md                          # This file
-├── PILLOW_OOP_ANALYSIS.md            # Complete written analysis (15 pages)
-├── custom_filters.py                 # Working Python extension code
-├── diagrams/                         # UML diagrams
-│   ├── class_hierarchy.txt           # Text-based UML
-│   └── architecture.txt              # Architecture diagrams
-└── report/
-    └── OOP_Analysis_Report.pdf       # Formatted PDF report
+ README.md                          # This file
+PILLOW_OOP_ANALYSIS.md            # Complete written analysis (15 pages)
+custom_filters.py                 # Working Python extension code
+diagrams/                         # UML diagrams
+class_hierarchy.txt           # Text-based UML
+architecture.txt              # Architecture diagrams
+report
+ OOP_Analysis_Report.pdf       # Formatted PDF report
 ```
 
 ## Why we use Pillow?
 
 Pillow was chosen because it exemplifies professional-grade OOP design:
 
-| Aspect | Value |
-|--------|-------|
-| **Core OOP Principles** | All 4 principles clearly demonstrated |
-| **Design Patterns** | Plugin Architecture, Template Method, Abstract Factory |
-| **Real-World Usage** | 10,000+ GitHub stars, used by major companies |
-| **Codebase Size** | Ideal for analysis (~10,000 Python lines) |
-| **Documentation** | Excellent, making it learner-friendly |
-| **Extensibility** | Easy to understand and extend |
+ Aspect  Value
+
+| **Core OOP Principles** All 4 principles clearly demonstrated 
+| **Design Patterns** | Plugin Architecture, Template Method, Abstract Factory 
+| **Real-World Usage**  10,000+ GitHub stars, used by major companies 
+| **Codebase Size**  Ideal for analysis (~10,000 Python lines) 
+| **Documentation**  Excellent, making it learner-friendly 
+| **Extensibility**  Easy to understand and extend |
 
 ## Key Findings
 
 ### 1. Inheritance Hierarchy
 
-```
+
 Image (Main Class)
 └── ImageFile (Abstract Base)
     ├── GifImageFile
@@ -231,7 +226,7 @@ Demonstration Complete!
 
 ## OOP Principles in Code
 
-### ✅ Encapsulation Example
+### Encapsulation Example
 
 ```python
 class VignetteFilter(ImageFilter.Filter):
@@ -247,7 +242,7 @@ class VignetteFilter(ImageFilter.Filter):
         pass
 ```
 
-### ✅ Inheritance Example
+### Inheritance Example
 
 ```python
 # Custom filter inherits from Pillow's abstract class
@@ -261,7 +256,7 @@ class VignetteFilter(ImageFilter.Filter):
 result = img.filter(VignetteFilter())
 ```
 
-### ✅ Polymorphism Example
+###  Polymorphism Example
 
 ```python
 # All filters used identically - polymorphism!
@@ -275,7 +270,7 @@ for filter_obj in filters:
     img = img.filter(filter_obj)  # Works for any Filter subclass
 ```
 
-### ✅ Abstraction Example
+###  Abstraction Example
 
 ```python
 # Users see simple API
@@ -350,13 +345,13 @@ See [`PILLOW_OOP_ANALYSIS.md`](PILLOW_OOP_ANALYSIS.md) for:
 
 ## Comparison with Alternative Libraries
 
-| Feature | Pillow | OpenCV | scikit-image |
-|---------|--------|--------|--------------|
-| **OOP Design** | Plugin-based | Functional | NumPy-based |
-| **Extensibility** | High | Medium | High |
-| **Use Case** | Web, general | Computer vision | Data science |
-| **Learning Curve** | Easy | Steep | Medium |
-| **Performance** | Good | Excellent | Good |
+| Feature  Pillow  OpenCV  scikit-image 
+
+ **OOP Design**  Plugin-based  Functional NumPy-based 
+ **Extensibility**  High  Medium  High 
+ **Use Case**  Web, general  Computer vision  Data science 
+ **Learning Curve**  Easy  Steep  Medium 
+ **Performance**  Good  Excellent  Good 
 
 ### Pillow's Design Advantages
 
@@ -369,23 +364,23 @@ See [`PILLOW_OOP_ANALYSIS.md`](PILLOW_OOP_ANALYSIS.md) for:
 
 Students completing this analysis understand:
 
-1. ✅ How professional libraries organize code with OOP
-2. ✅ Class hierarchies and inheritance in real projects
-3. ✅ Abstract base classes for interface contracts
-4. ✅ Design patterns (Plugin, Template Method, etc.)
-5. ✅ Encapsulation for data protection
-6. ✅ Polymorphism for extensibility
-7. ✅ How to extend existing libraries
-8. ✅ Trade-offs in design decisions
+1.  How professional libraries organize code with OOP
+2.  Class hierarchies and inheritance in real projects
+3.  Abstract base classes for interface contracts
+4.  Design patterns (Plugin, Template Method, etc.)
+5.  Encapsulation for data protection
+6.  Polymorphism for extensibility
+7.  How to extend existing libraries
+8.  Trade-offs in design decisions
 
 ## Files Included
 
-| File | Description |
-|------|-------------|
-| `README.md` | This file - project overview |
-| `PILLOW_OOP_ANALYSIS.md` | Complete written analysis |
-| `custom_filters.py` | Working Python extension code |
-| `report/OOP_Analysis_Report.pdf` | Formatted PDF (15 pages) |
+ File  Description 
+
+| `README.md`  This file - project overview 
+| `PILLOW_OOP_ANALYSIS.md`  Complete written analysis 
+| `custom_filters.py` | Working Python extension code 
+| 
 
 ## Running the Project
 
@@ -430,39 +425,10 @@ result = img.filter(VignetteFilter()).filter(SepiaToneFilter())
 result.save('combined.jpg')
 ```
 
-## Marking Rubric Alignment
 
-Our project addresses all rubric components:
 
-- ✅ **Library Overview** (5 pts) - Complete Pillow introduction
-- ✅ **Class Hierarchy Diagram** (15 pts) - Detailed UML with 5+ classes
-- ✅ **OOP Principles** (20 pts) - All 4 principles with code examples
-- ✅ **Design Decision Analysis** (15 pts) - Plugin architecture critique
-- ✅ **Custom Extension Code** (20 pts) - Working filters demonstrating principles
-- ✅ **Comparison with Alternatives** (10 pts) - OpenCV, scikit-image comparison
-- ✅ **Report Quality** (10 pts) - Professional formatting, references, clarity
-- ✅ **Presentation** (5 pts) - Ready for 10-minute in-class presentation
 
-**Expected Total: 100 marks**
 
-## References
-
-### Official Documentation
-- [Pillow Documentation](https://pillow.readthedocs.io/)
-- [Pillow GitHub](https://github.com/python-pillow/Pillow)
-- [PIL Original Archive](http://www.pythonware.com/products/pil/)
-
-### Design Patterns
-- [Design Patterns: Elements of Reusable Object-Oriented Software](https://en.wikipedia.org/wiki/Design_Patterns) - Gamma et al.
-- [Refactoring Guru Design Patterns](https://refactoring.guru/design-patterns)
-
-### OOP Concepts
-- [Python ABC Module](https://docs.python.org/3/library/abc.html)
-- [Python Properties and Descriptors](https://docs.python.org/3/howto/descriptor.html)
-
-## License
-
-This project is for educational purposes. Pillow is under PIL Software License.
 
 ## Questions & Discussion
 
@@ -470,15 +436,4 @@ For questions about:
 - **OOP concepts** - See PILLOW_OOP_ANALYSIS.md
 - **Custom filters** - See docstrings in custom_filters.py
 - **Project structure** - Check this README
-
----
-
-**Project Status:** ✅ Complete  
-**Last Updated:** May 2026  
-**Version:** 1.0
-
-**Submitted by:** [Group Names]  
-**Course:** Object-Oriented Programming - BS Data Science  
-**Semester:** 2nd Semester  
-**Instructor:** [Instructor Name]
 
