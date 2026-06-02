@@ -1,4 +1,8 @@
 # OOP Analysis: Pillow Library
+Group Member     Roll num
+Hammad Latif_____2049
+MUDASSIR Jabbar___2052
+Javeria Ahmad_____2074
 
 A comprehensive Object-Oriented Programming analysis of the **Pillow (PIL)** image processing library for the BS Data Science OOP Final Term Project.
 
@@ -46,12 +50,12 @@ Pillow was chosen because it exemplifies professional-grade OOP design:
 
 
 Image (Main Class)
-└── ImageFile (Abstract Base)
-    ├── GifImageFile
-    ├── PngImageFile
-    ├── JpegImageFile
-    ├── BmpImageFile
-    └── [30+ other format handlers]
+ ImageFile (Abstract Base)
+GifImageFile
+     PngImageFile
+     JpegImageFile
+     BmpImageFile
+    
 ```
 
 **Key Insight:** Pillow uses inheritance to implement a plugin architecture where each image format is a separate subclass. This enables:
