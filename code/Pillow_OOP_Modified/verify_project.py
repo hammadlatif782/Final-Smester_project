@@ -251,7 +251,7 @@ class ProjectVerifier:
         
         # Check Analysis document
         try:
-            with open(self.base_dir / "PILLOW_OOP_ANALYSIS.md", "r") as f:
+            with open(self.base_dir / "PILLOW_OOP_ANALYSIS.md", "r", encoding="utf-8") as f:
                 content = f.read()
                 size = len(content)
                 if size > 5000:
